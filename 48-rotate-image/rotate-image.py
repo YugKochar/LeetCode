@@ -4,10 +4,13 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
         n = len(matrix)
-        temp = [row[:]for row in matrix]
 
         for i in range(n):
-            for j in range(n):
-                matrix[j][n-1-i] = temp[i][j]
-        return matrix
+            for j in range(i+1,n):
+                matrix[i][j], matrix[j][i] = matrix[j][i],   matrix[i][j]
+
+        for i in range(n):
+            matrix[i].reverse()
+
+        
         
