@@ -4,5 +4,6 @@ class Solution:
         y = len(nums)
         if x==y:
             return False
-        return True
+        else:
+            return True
         
