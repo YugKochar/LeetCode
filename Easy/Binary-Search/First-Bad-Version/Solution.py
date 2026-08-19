@@ -7,6 +7,8 @@ class Solution:
         right = n
         while left<right:
             mid = (left+right)//2
+            if isBadVersion(left):
+                return left
             if isBadVersion(mid):
                 right = mid
             else:
